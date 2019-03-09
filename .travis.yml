@@ -1,9 +1,13 @@
 language: node_js
 node_js:
   - '10'
-cache: npm
+cache:
+  directories:
+    - dist
+    - node_modules
 install:
   - npm install
 script:
   - npm run lint
   - npm run test
+  - npm run build
